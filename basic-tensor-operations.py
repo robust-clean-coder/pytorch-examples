@@ -1,14 +1,24 @@
-import torch
+# Import the PyTorch library
+import torch  # PyTorch is used for tensor computations and deep learning
 
-# Create tensors
-x = torch.tensor([[1, 2], [3, 4]], dtype=torch.float32)
-y = torch.tensor([[5, 6], [7, 8]], dtype=torch.float32)
+# Create tensors x and y with shape (2, 2) and float32 data type
+x = torch.tensor([[1, 2], [3, 4]], dtype=torch.float32)  # Tensor x: [[1, 2], [3, 4]]
+y = torch.tensor([[5, 6], [7, 8]], dtype=torch.float32)  # Tensor y: [[5, 6], [7, 8]]
 
-# Basic operations
-add = x + y
-mul = x * y
-matmul = torch.matmul(x, y)
+# Perform element-wise addition of x and y
+add = x + y  # [[6, 8], [10, 12]]
 
-print("Addition:\n", add)
-print("Element-wise Multiplication:\n", mul)
-print("Matrix Multiplication:\n", matmul)
+# Perform element-wise multiplication of x and y
+mul = x * y  # [[5, 12], [21, 32]]
+
+# Perform matrix multiplication (dot product) of x and y
+matmul = torch.matmul(x, y)  # [[19, 22], [43, 50]]
+
+# Print the result of addition
+print("Addition:\n", add)  # Display element-wise sum of tensors
+
+# Print the result of element-wise multiplication
+print("Element-wise Multiplication:\n", mul)  # Display element-wise product
+
+# Print the result of matrix multiplication
+print("Matrix Multiplication:\n", matmul)  # Display matrix multiplication result
